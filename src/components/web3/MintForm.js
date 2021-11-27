@@ -45,7 +45,7 @@ class MintForm extends React.Component {
       const totalSupply = await contract.methods.totalSupply().call();
       const maxSupply = await contract.methods.MAX_SUPPLY().call();
       const preSalePricePerToken = await contract.methods
-        .PRE_SALE_PRICE_PER_TOKEN()
+        .PRICE_PER_TOKEN()
         .call();
       const pricePerToken = await contract.methods.PRICE_PER_TOKEN().call();
       const maxMint = await contract.methods.MAX_PUBLIC_MINT().call();

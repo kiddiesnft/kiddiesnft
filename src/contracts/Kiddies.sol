@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
-contract kiddies is ERC721Enumerable, Ownable {
+contract Kiddies is ERC721Enumerable, Ownable {
 
   uint public constant PRICE_PER_TOKEN = 0.09 ether;
   uint public constant MAX_SUPPLY = 10000;
