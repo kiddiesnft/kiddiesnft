@@ -1,71 +1,62 @@
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif, "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
-  background-image: url("/src/images/kiddies_100px.png");
-  background-repeat: repeat-xy;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.MintForm {
-  text-align: center;
-}
-
-#mint .container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-}
-
-#mint .container img {
-  width: 100%;
-  height: auto;
-  animation: heartbeat 1s infinite;
-}
-
-#mint {
-  visibility: visible;
-}
-
-section {
-  display: flex;
-  visibility: hidden;
-}
-
-footer {
-  margin-top: 1%;
-  text-align: center;
-  font-size: small;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 a.nav-link {
   color: black;
 }
 
-@keyframes heartbeat {
-  0% {
-    transform: scale(0.75);
+.MintForm {
+  text-align: center;
+}
+
+#mint {
+  visibility: visible;
+}
+
+section .header {
+  text-align: center;
+  margin: 12px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member {
+  margin: 1%;
+  text-align: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .questions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    margin-left: 25%;
+    margin-right: 25%;
   }
-  20% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(0.75);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(0.75);
-  }
-  100% {
-    transform: scale(0.75);
-  }
+}
+
+footer {
+  margin-top: 1%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: small;
 }

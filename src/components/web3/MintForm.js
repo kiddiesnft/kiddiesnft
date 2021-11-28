@@ -1,6 +1,5 @@
 import React from "react";
-import Contract from "../../abis/kiddies.json";
-import HeartImage from "../../images/heart.png"
+import Contract from "../../abis/Kiddies.json";
 import Web3 from "web3";
 
 const isWebPageReady = false;
@@ -218,7 +217,6 @@ class MintForm extends React.Component {
     if (!isWebPageReady) {
     return (
       <div class="container">
-          <img src={HeartImage} alt="heart"/>
       </div>
       );
     }

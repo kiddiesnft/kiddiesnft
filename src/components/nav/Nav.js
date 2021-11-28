@@ -1,6 +1,6 @@
 import React from "react";
-import TwitterIcon from "../../images/twitter/Logoblue.png";
 import Kiddies from "../../images/kiddies.png";
+import TwitterIcon from "../../images/twitter/Logoblue.png";
 import DiscordIcon from "../../images/discord/icon_clyde_blurple_RGB.png";
 
 class NavAppBar extends React.Component {
@@ -8,15 +8,14 @@ class NavAppBar extends React.Component {
     return (
       <nav class="navbar navbar-light" id="nav">
       {/* TODO replace this with logo */}
-        <a class="navbar-brand" href="#nav" rel="noreferrer">
+        <a class="navbar-brand" href="./" rel="noreferrer">
           <img
             src={Kiddies}
-            width="30"
-            height="30"
-            class="d-inline-block align-top ms-3 me-2"
+            width="150"
+            height="67"
+            class="d-inline-block align-top"
             alt=""
           />
-          Kiddies
         </a>
         <div class="float-right">
           <ul class="nav nav-pills">
@@ -41,7 +40,7 @@ class NavAppBar extends React.Component {
               </a>
             </li> */}
             <li class="nav-item">
-              <a class="nav-link" href="https://discord.gg/3tMpYsVHSh" target="_blank" rel="noreferrer">
+              <a class="nav-link" href="https://discord.gg/xxxxxx" target="_blank" rel="noreferrer">
                 <img
                   src={DiscordIcon}
                   width="30"
@@ -52,7 +51,7 @@ class NavAppBar extends React.Component {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://twitter.com/kiddies" target="_blank" rel="noreferrer">
+              <a class="nav-link" href="https://twitter.com/kiddiesnft" target="_blank" rel="noreferrer">
                 <img
                   src={TwitterIcon}
                   width="30"

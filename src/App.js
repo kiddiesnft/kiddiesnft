@@ -1,29 +1,31 @@
 import "./App.css";
 import NavAppBar from "./components/nav/Nav.js";
 import MintForm from "./components/web3/MintForm.js";
+import FAQ from "./components/faq.js"
+import Team from "./components/team.js"
+import Roadmap from "./components/roadmap.js"
 
 function App() {
   return (
-    <div className="App" class="ms-5 me-5">
-      {/* <NavAppBar /> */}
+    <div className="App">
+      <NavAppBar />
       <header className="App-header">
       </header>
       <section id="mint">
         <MintForm />
       </section>
-      <section id="learn">
-        Learn
-      </section>
       <section id="roadmap">
-        Roadmap
+        <Roadmap/>
       </section>
       <section id="team">
-        Team
+        <Team/>
       </section>
       <section id="faq">
-        FAQ
+        <FAQ/>
       </section>
-      <footer></footer>
+      <footer>
+        Created by Kiddies LLC
+      </footer>
     </div>
   );
 }
