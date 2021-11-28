@@ -4,11 +4,13 @@ import MintForm from "./components/web3/MintForm.js";
 import FAQ from "./components/faq.js"
 import Team from "./components/team.js"
 import Roadmap from "./components/roadmap.js"
+import ComingSoon from "./components/comingsoon.js"
 
 function App() {
   return (
     <div className="App">
-      <NavAppBar />
+      <ComingSoon/>
+      {/* <NavAppBar />
       <header className="App-header">
       </header>
       <section id="mint">
@@ -25,7 +27,7 @@ function App() {
       </section>
       <footer>
         Created by Kiddies LLC
-      </footer>
+      </footer> */}
     </div>
   );
 }

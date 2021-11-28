@@ -1,15 +1,38 @@
 body {
-  font-family: "Roboto", sans-serif, "Ubuntu", "Cantarell", "Fira Sans",
+  font-family: "Poppins", "Roboto", sans-serif, "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: #d42f0b;
+  color: white;
   padding-left: 5%;
   padding-right: 5%;
 }
 
 a.nav-link {
-  color: black;
+  color: white;
+}
+
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.coming-soon-gif {
+  width: 20%;
+  height: 20%;
+}
+
+.coming-soon-logo {
+  width: 50%;
+  height: 50%;
+}
+
+.coming-soon-social-media {
+  width: 10%;
+  height: 10%;
 }
 
 .MintForm {
