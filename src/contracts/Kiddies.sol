@@ -16,7 +16,7 @@ contract Kiddies is ERC721Enumerable, Ownable {
   bool public isPresaleActive;
   bool public isSaleActive;
   
-  string private _baseURIextended;
+  string private _baseURIExtended;
 
   mapping(address => uint) private _presaleList;
 
@@ -51,11 +51,11 @@ contract Kiddies is ERC721Enumerable, Ownable {
   }
 
   function setBaseURI(string memory baseURI_) external onlyOwner {
-    _baseURIextended = baseURI_;
+    _baseURIExtended = baseURI_;
   }
 
   function _baseURI() internal view virtual override returns (string memory) {
-    return _baseURIextended;
+    return _baseURIExtended;
   }
 
   function setProvenance(string memory provenance_) public onlyOwner {
