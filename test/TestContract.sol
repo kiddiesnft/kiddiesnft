@@ -7,7 +7,7 @@ import "../src/contracts/Kiddies.sol";
 contract TestContract{
 
   function testDefaultValue() public {
-    kiddies _contract = kiddies(DeployedAddresses.kiddies());
+    Kiddies _contract = Kiddies(DeployedAddresses.Kiddies());
 
     Assert.equal(_contract.isPresaleActive(), false, "Presale should not be enable");
     Assert.equal(_contract.isSaleActive(), false, "Sale should not be enable");
