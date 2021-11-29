@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const Contract = artifacts.require("../src/contracts/kiddies.sol");
+const Contract = artifacts.require("../src/contracts/Kiddies.sol");
 
 require('Chai')
   .use(require('chai-as-promised'))

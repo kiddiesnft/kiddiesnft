@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
 contract Kiddies is ERC721Enumerable, Ownable {
 
-  uint public constant PRICE_PER_TOKEN = 0.09 ether;
+  uint public constant PRICE_PER_TOKEN = 0.08 ether;
   uint public constant MAX_SUPPLY = 10000;
   uint public constant MAX_PUBLIC_MINT = 10;
 
