@@ -147,7 +147,7 @@ class MintForm extends React.Component {
       })
       .catch((error) => {
         // TODO replace with toast
-        alert(`We could not process your transaction`);
+        console.log(`We could not process your transaction`);
       });
   }
 
@@ -165,7 +165,7 @@ class MintForm extends React.Component {
       .then(this.handleAccountsChanged)
       .catch((err) => {
         // TODO replace with toast
-        alert(`error has occurred - reconnet Metamask`);
+        console.log(`error has occurred - reconnect Metamask`);
       });
   }
 
@@ -176,8 +176,23 @@ class MintForm extends React.Component {
   createForm(isPresale, maxMintAllowed) {
     const mintButton = isPresale ? "Mint Presale" : "Mint";
     const remainingToken = this.state.maxSupply - this.state.totalSupply;
+
+    if (remainingToken) {
+      return (
+        <div className="container">
+          <div className="row">
+            <div className="col text-center">
+              <button className="btn btn-lg btn-primary" disabled>
+                Sold out
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
-      <div class="MintForm">
+      <div className="MintForm">
         <h3>Remaining Tokens: {remainingToken}</h3>
         <form
           onSubmit={(event) => {
@@ -187,11 +202,11 @@ class MintForm extends React.Component {
             isPresale ? this.mintPresale(qty) : this.mintSale(qty);
           }}
         >
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="tokenQty">Quantity:</label>
             <select
               id="tokenQty"
-              class="form-control form-control"
+              className="form-control form-control"
               onChange={(event) => {
                 this.qty = event.target.value;
               }}
@@ -205,7 +220,7 @@ class MintForm extends React.Component {
           </div>
           <input
             type="submit"
-            class="btn btn-lg btn-primary"
+            className="btn btn-lg btn-primary"
             value={mintButton}
           />
         </form>
@@ -215,10 +230,7 @@ class MintForm extends React.Component {
 
   render() {
     if (!isWebPageReady) {
-    return (
-      <div class="container">
-      </div>
-      );
+      return <div className="container"></div>;
     }
 
     if (
@@ -226,11 +238,11 @@ class MintForm extends React.Component {
       this.state.currentAccount === ""
     ) {
       return (
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <button class="btn btn-lg btn-primary" onClick={this.connect}>
-                Connect to Wallet
+        <div className="container">
+          <div className="row">
+            <div className="col text-center">
+              <button className="btn btn-lg btn-primary" onClick={this.connect}>
+                Connect Wallet
               </button>
             </div>
           </div>
@@ -245,11 +257,11 @@ class MintForm extends React.Component {
       return this.createForm(true, presaleMaxMint);
     }
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <button class="btn btn-lg btn-primary" disabled>
-              Coming Soon
+      <div className="container">
+        <div className="row">
+          <div className="col text-center">
+            <button className="btn btn-lg btn-primary" disabled>
+              Mint Coming Soon
             </button>
           </div>
         </div>
