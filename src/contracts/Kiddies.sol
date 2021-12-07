@@ -12,7 +12,6 @@ contract Kiddies is ERC721Enumerable, Ownable {
   uint public constant MAX_PUBLIC_MINT = 10;
 
   string public provenance;
-  uint public kiddieStartIndex;
 
   bool public isPresaleActive;
   bool public isSaleActive;
@@ -22,7 +21,6 @@ contract Kiddies is ERC721Enumerable, Ownable {
   mapping(address => uint) private _presaleList;
 
   constructor() ERC721("Kiddies", "KIDDIES") {
-    kiddieStartIndex = uint(block.number % MAX_SUPPLY);
   }
 
   function setPresaleState(bool _isPresaleActive) external onlyOwner {
